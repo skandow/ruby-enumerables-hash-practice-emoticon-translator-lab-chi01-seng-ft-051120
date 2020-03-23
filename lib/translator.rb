@@ -4,7 +4,7 @@ require 'yaml'
 def load_library(file)
   emoticon_library = YAML.load_file(file)
   library_hash = {"get_emoticon": {}, "get_meaning": {}}
-  emoticon_library_sorted = emoticon_library.map do |index|
+  emoticon_library_sorted = emoticon_library.each do |index|
     meaning = index
     english_emoji = index[0]
     japanese_emoji = index[1]
