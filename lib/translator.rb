@@ -3,7 +3,8 @@ require "yaml"
 
 def load_library(file)
   emoticon_library = YAML.load_file(file)
-  emoticon_library
+  library_sort = {"get_meaning": {}, "get_emoticon": {}}
+  emotic
   # code goes here
 end
 
