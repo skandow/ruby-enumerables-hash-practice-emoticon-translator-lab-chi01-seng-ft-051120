@@ -23,7 +23,7 @@ def get_japanese_emoticon(file, emoticon)
   if answer != nil 
     return answer 
   else 
-    return "I'm sorry.  This is not a known emoticon."
+    return "Sorry, that emoticon was not found."
   end 
 end 
 
