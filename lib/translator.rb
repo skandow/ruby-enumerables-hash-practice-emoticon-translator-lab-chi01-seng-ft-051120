@@ -4,7 +4,8 @@ require 'yaml'
 def load_library(file)
   emoticon_library = YAML.load_file(file)
   emoticon_library
-  
+  emoticon_library_sorted = emoticon_library_map do |index|
+    index[0]
   # code goes here
 end
 
