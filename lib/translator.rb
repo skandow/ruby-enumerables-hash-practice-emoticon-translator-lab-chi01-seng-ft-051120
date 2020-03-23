@@ -7,7 +7,7 @@ def load_library(file)
   emoticon_library_array = emoticon_library.to_a
   array_count = 0 
   while array_count < emoticon_library_array.length do 
-    meaning = emoticon_library_array[array_count].to_s
+    meaning = emoticon_library_array[array_count]
     emoticon_array = emoticon_library[array_count + 1]
     english_emoji = [emoticon_array][0]
     japanese_emoji = [emoticon_array][1]
