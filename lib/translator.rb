@@ -4,12 +4,14 @@ require 'yaml'
 def load_library(file)
   emoticon_library = YAML.load_file(file)
   emoticon_library
-  english_hash = {"get_emoticon": {}}
-  japanese_hash = {"get_meaning": {}}
+  library_hash = {"get_emoticon": {}, "get_meaning": {}}
   emoticon_library_sorted = emoticon_library_map do |index|
     english_emoji = index[0]
     japanese_emoji = index[1]
-    hash_2 = {"get_meaning": japanese_emoji}
+    library_hash[:get_emoticon][:english_emoji] = japanese_emoji
+    library_hash[:get_meaning][:japanese_emoji] = english_emoji
+  end 
+  library_hash
   # code goes here
 end
 
