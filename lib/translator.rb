@@ -7,12 +7,13 @@ def load_library(file)
   emoticon_library_array = emoticon_library.to_a
   array_count = 0 
   while array_count < emoticon_library_array.length do 
-    meaning = emoticon_library_array[array_count].to_s 
-    english_emoji = emoticon_library_array[array_count][0]
-    japanese_emoji = emoticon_library_array[array_count][1]
+    meaning = emoticon_library_array[array_count].to_s
+    emoticon_array = emoticon_library[array_count + 1]
+    english_emoji = [emoticon_array][0]
+    japanese_emoji = [emoticon_array][1]
     library_hash[:get_emoticon][english_emoji] = japanese_emoji
     library_hash[:get_meaning][japanese_emoji] = meaning
-    
+    emoticon_library_array.
   end 
   library_hash
   # code goes here
