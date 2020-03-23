@@ -13,7 +13,8 @@ def load_library(file)
     japanese_emoji = [emoticon_array][1]
     library_hash[:get_emoticon][english_emoji] = japanese_emoji
     library_hash[:get_meaning][japanese_emoji] = meaning
-    emoticon_library_array.
+    emoticon_library_array.delete_at(array_count + 1)
+    array_count += 1 
   end 
   library_hash
   # code goes here
